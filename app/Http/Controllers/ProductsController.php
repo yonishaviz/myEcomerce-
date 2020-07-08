@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\category;
+use App\Category;
 use App\product;
 
 
@@ -18,7 +18,7 @@ class ProductsController extends Controller
     public function index()
     {
         $pagination = 9;
-        $categories = category::all();
+        $categories = Category::all();
        if(request()->category){
      $products = product::with('categories') 
     ->whereHas('categories',function($query){
