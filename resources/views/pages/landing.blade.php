@@ -19,7 +19,9 @@
  @forelse($products as $product)
 <div class="product">
   <div>  <a href ="{{route('shop.show',$product->slug)}}">
-    <img style="width:20%" src= "{{$proudct->product_image}}" alt="product"> 
+  
+    <img style="width:20%" src= "{{$product->product_image}}" alt="product">
+     
     </a>
       
     </div>
