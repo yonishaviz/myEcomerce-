@@ -21,7 +21,8 @@ class ProductsTableSeeder extends Seeder
     'slug'=> 'labtop'.$i,            
     'details' => ['hp ','dell ','apple '][array_rand(['hp ','dell ','apple '])]            . ['16','17','18'][array_rand(['16','17','18'])]. 'inch, hardesk 500 GBM, 8RAM ',
     'price' => rand(2000,1000),
-    'desc' => ' new labtop with new fetuares and hight speed, good specification',])->categories()->attach(1);      
+    'desc' => ' new labtop with new fetuares and hight speed, good specification',
+            'product_image'=>'storage/cover_images/labtop'.$i.'.jpg'])->categories()->attach(1);      
          }
         $product = product::find(1);
         $product->categories()->attach(2);
